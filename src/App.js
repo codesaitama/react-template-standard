@@ -31,19 +31,11 @@ const App = props => {
                 {/*Start layout routes */}
                 <Router history={history}>
                   <Switch>
-                    <Route
-                      exact
-                      path="/"
-                      render={() => <Redirect to="/dashboard" />}
+                    <Route exact path="/"  render={() => <Redirect to="/dashboard" />}
                     />
                     {layoutRoutes.map((prop, key) => {
                       return (
-                        <Route
-                          path={prop.path}
-                          component={prop.component}
-                          key={key}
-                          history={history}
-                        />
+                        <Route path={prop.path} component={prop.component} key={key} history={history} />
                       );
                     })}
                   </Switch>
