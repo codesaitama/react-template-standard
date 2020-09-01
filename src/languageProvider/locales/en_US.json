@@ -1,5 +1,6 @@
 {
   "sidebar.demo": "Demo",
+  "sidebar.home": "Home",
   "sidebar.demopage": "Demo Page",
   "sidebar.dashboard": "Dashboard",
   "sidebar.dashboards": "Dashboards",
@@ -144,5 +145,12 @@
   "header.editprofile": "Edit Profile",
   "header.settings": "Settings",
   "header.inbox": "Inbox",
-  "header.signout": "Signout"
+  "header.signout": "Signout",
+
+  "sidebar.employee": "Employee",
+  "sidebar.employeeinsert": "Insert",
+  "sidebar.employeemovement": "Movement",
+  "sidebar.transaction": "Transaction",
+  "sidebar.setup": "Setup",
+  "header.create_employee": "Create Employee"
 }
