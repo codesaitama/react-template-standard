@@ -1,6 +1,6 @@
 import React from "react";
 import FooterWrapper from "./footer.style";
-import Button from "components/button/Button";
+//import Button from "components/button/Button";
 
 const Footer = props => {
   return (
@@ -10,7 +10,7 @@ const Footer = props => {
           © 2019 Hexesis, All rights reserved.
         </div>
         <div>
-          <Button
+          {/* <Button
             className="c-btn c-info ma-5 footer-purchase-button"
             onClick={() =>
               window.open(
@@ -20,7 +20,7 @@ const Footer = props => {
             }
           >
             <span className="fs-14 demi-bold-text">Purchase ROE</span>
-          </Button>
+          </Button> */}
         </div>
       </div>
     </FooterWrapper>
