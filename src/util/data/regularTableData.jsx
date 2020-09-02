@@ -1,5 +1,6 @@
 export const regularTabelData = [
     {
+        employeeId: "PSL0001",
         firstname: "Alice",
         lastname: "Blue",
         email: "aliceblue@gmail.com",
@@ -7,6 +8,7 @@ export const regularTabelData = [
         role: "Developer"
     },
     {
+        employeeId: "PSL0002",
         firstname: "Aaron",
         lastname: "Hank",
         email: "aaronhank@gmail.com",
@@ -14,6 +16,7 @@ export const regularTabelData = [
         role: "Business"
     },
     {
+        employeeId: "PSL0003",
         firstname: "Abagnale",
         lastname: "Frank",
         email: "abagnalefrank@gmail.com",
@@ -21,6 +24,7 @@ export const regularTabelData = [
         role: "Worker"
     },
     {
+        employeeId: "PSL0004",
         firstname: "Babbitt",
         lastname: "Milton",
         email: "babbittmilton@gmail.com",
@@ -28,6 +32,7 @@ export const regularTabelData = [
         role: "Developer"
     },
     {
+        employeeId: "PSL0005",
         firstname: "Desmond",
         lastname: "Paul",
         email: "DesmondPaul@gmail.com",
@@ -35,6 +40,7 @@ export const regularTabelData = [
         role: "Engineeer"
     },
     {
+        employeeId: "PSL0006",
         firstname: "Everett",
         lastname: "Carl",
         email: "EverettCarl@gmail.com",
@@ -45,21 +51,25 @@ export const regularTabelData = [
 
 export const regularTabelColumns = [
     {
-        column: "FirstName",
+        column: "Employee ID",
+        index: "employeeId"
+    },
+    {
+        column: "First Name",
         index: "firstname"
     },
     {
-        column: "LastName",
+        column: "Last Name",
         index: "lastname"
     },
-    {
-        column: "Email",
-        index: "email"
-    },
-    {
-        column: "PhoneNumber",
-        index: "phonenumber"
-    },
+    // {
+    //     column: "Email",
+    //     index: "email"
+    // },
+    // {
+    //     column: "PhoneNumber",
+    //     index: "phonenumber"
+    // },
     {
         column: "Role",
         index: "role"

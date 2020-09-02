@@ -18,16 +18,7 @@ const SimpleTable = props => {
     return (
         <div className="table-responsive">
             <table
-                className={classNames(
-                    "table",
-                    dark && "table-dark",
-                    striped && "table-striped",
-                    bordered && "table-bordered",
-                    borderless && "table-borderless",
-                    hover && "table-hover",
-                    small && "table-sm",
-                    className
-                )}
+                className={classNames( "table", dark && "table-dark", striped && "table-striped", bordered && "table-bordered", borderless && "table-borderless", hover && "table-hover", small && "table-sm", className )}
             >
                 {/* {caption && <caption>{caption ? caption : ""}</caption>} */}
                 <thead className={classNames(headerDark && "thead-dark")}>
@@ -41,18 +32,7 @@ const SimpleTable = props => {
                 <tbody>
                     {data &&
                         data.map((e, i) => {
-                            return (
-                                <tr key={i}>
-                                    {column &&
-                                        column.map((f, i) => {
-                                            return (
-                                                <td key={i}>
-                                                    {e[`${f.index}`]}
-                                                </td>
-                                            );
-                                        })}
-                                </tr>
-                            );
+                            return ( <tr key={i}> {column && column.map((f, i) => { return ( <td key={i}> {e[`${f.index}`]} </td> ); })} </tr>  );
                         })}
                 </tbody>
             </table>

@@ -7,7 +7,7 @@ const Footer = props => {
     <FooterWrapper {...props}>
       <div className="footerBack flex-x align-center">
         <div className="flex-1 fs-13 bold-text footer-text">
-          © 2019 Hexesis, All rights reserved.
+          © {new Date().getFullYear()} Persol System Ltd., All rights reserved.
         </div>
         <div>
           {/* <Button
