@@ -8,8 +8,10 @@ import {
   FileManager,
   Todos,
   Analytics,
-  ECommerce
+  ECommerce,
+  EmployeeInsert
 } from "views/app/index";
+
 import Board from "components/scrumboard/Board";
 
 // STYLE & USER INTERFACE
@@ -103,6 +105,10 @@ import ListGroupPage from "views/reactStrapComponent/ListGroupPage";
 import SpinnersPage from "views/reactStrapComponent/SpinnersPage";
 
 const dashboardRoutes = [
+
+  { path: "/insertemployee", component: EmployeeInsert },
+
+
   { path: "/dashboard", component: Dashboard },
   { path: "/e-commerce", component: ECommerce },
   { path: "/analytics", component: Analytics },
