@@ -8,9 +8,7 @@ const Todos = () => {
   return (
     // TodosWrapper is a style component for application
     <TodosWrapper>
-      <PageTitle
-        title="sidebar.todos"
-        className="plr-15"
+      <PageTitle title="sidebar.todos" className="plr-15"
         breadCrumb={[
           {
             name: "sidebar.app"

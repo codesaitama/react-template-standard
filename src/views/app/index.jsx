@@ -8,6 +8,8 @@ import Todos from "views/app/Todos";
 import Analytics from "views/app/dashboards/Analytics";
 import ECommerce from "views/app/dashboards/ECommerce";
 
+import EmployeeInsert from "views/app/employee/EmployeeInsert";
+
 export {
   Chat,
   Dashboard,
@@ -17,5 +19,7 @@ export {
   FileManager,
   Todos,
   Analytics,
-  ECommerce
+  ECommerce,
+  
+  EmployeeInsert
 };

@@ -3,469 +3,53 @@ export const sidebarData = [
     type: "heading",
     name: "sidebar.app"
   },
+
   {
-    name: "sidebar.dashboards",
-    iconClass: "fas fa-chalkboard",
+    name: "sidebar.home",
+    iconClass: "fas fa-laptop",
     child: [
       {
         listname: "sidebar.dashboard",
         routepath: "/dashboard",
-        shortname: "DA"
+        shortname: "DA",
+        isNew: false
       },
       {
         listname: "sidebar.analytics_dashboard",
         routepath: "/analytics",
         shortname: "AN",
         isNew: true
-      },
-      {
-        listname: "sidebar.ecommerce_dashboard",
-        routepath: "/e-commerce",
-        shortname: "EC",
-        isNew: true
       }
     ]
   },
+
   {
-    name: "sidebar.calender",
-    routepath: "/calender",
-    iconClass: "far fa-calendar"
-  },
-  {
-    name: "sidebar.filemanager",
-    routepath: "/filemanager",
-    iconClass: "far fa-folder-open"
-  },
-  {
-    name: "sidebar.scrumboard",
-    routepath: "/scrumboard",
-    iconClass: "fas fa-clipboard-list"
-  },
-  {
-    name: "sidebar.chat",
-    routepath: "/chat",
-    iconClass: "far fa-comment-alt"
-  },
-  {
-    name: "sidebar.contact",
-    routepath: "/contact",
-    iconClass: "fas fa-users"
-  },
-  {
-    name: "sidebar.todos",
-    routepath: "/todos",
-    iconClass: "fas fa-list-ol",
-    isNew: true
-  },
-  {
-    type: "heading",
-    name: "sidebar.style&userinterface"
-  },
-  {
-    name: "sidebar.colors",
-    routepath: "/colors",
-    iconClass: "fas fa-palette"
-  },
-  {
-    name: "sidebar.icons",
-    routepath: "/icons",
-    iconClass: "fas fa-info-circle"
-  },
-  {
-    name: "sidebar.typography",
-    routepath: "/typography",
-    iconClass: "fas fa-font"
-  },
-  {
-    name: "sidebar.forms",
-    iconClass: "fab fa-wpforms",
+    name: "sidebar.employee",
+    iconClass: "fas fa-users",
     child: [
       {
-        listname: "sidebar.regularforms",
-        routepath: "/regularform",
-        shortname: "RE"
-      },
-      {
-        listname: "sidebar.datepicker",
-        routepath: "/datepicker",
-        shortname: "DA"
-      },
-      {
-        listname: "sidebar.validationforms",
-        routepath: "/validationforms",
-        shortname: "VA"
-      },
-      {
-        listname: "sidebar.select",
-        routepath: "/select",
-        shortname: "SE"
-      },
-      {
-        listname: "sidebar.selectcontrols",
-        routepath: "/selectcontrols",
-        shortname: "SE"
-      }
-    ]
-  },
-  {
-    type: "heading",
-    name: "sidebar.editors"
-  },
-  {
-    name: "sidebar.quilleditor",
-    routepath: "/quill-editor",
-    iconClass: "fas fa-newspaper"
-  },
-  {
-    name: "sidebar.roeeditor",
-    routepath: "/roe-custom-editor",
-    iconClass: "fas fa-newspaper"
-  },
-  {
-    name: "sidebar.foreditor",
-    routepath: "/for-editor",
-    iconClass: "fas fa-newspaper"
-  },
-  {
-    name: "sidebar.wysiwygeditor",
-    routepath: "/wysiwyg-editor",
-    iconClass: "fas fa-newspaper"
-  },
-  {
-    type: "heading",
-    name: "sidebar.pages"
-  },
-  {
-    name: "sidebar.userprofile",
-    routepath: "/profile",
-    iconClass: "far fa-user"
-  },
-  {
-    name: "sidebar.login",
-    routepath: "/login",
-    iconClass: "fas fa-sign-in-alt"
-  },
-  {
-    name: "sidebar.register",
-    routepath: "/register",
-    iconClass: "far fa-registered"
-  },
-  {
-    name: "sidebar.forgotpassword",
-    routepath: "/forgotPassword",
-    iconClass: "fas fa-unlock-alt"
-  },
-  {
-    name: "sidebar.lockscreen",
-    routepath: "/lockscreen",
-    iconClass: "fas fa-user-lock"
-  },
-  {
-    name: "sidebar.error",
-    iconClass: "fas fa-exclamation-triangle",
-    child: [
-      {
-        listname: "sidebar.400",
-        routepath: "/error400",
-        shortname: "400"
-      },
-      {
-        listname: "sidebar.500",
-        routepath: "/error500",
-        shortname: "500"
-      }
-    ]
-  },
-  {
-    name: "sidebar.pricing",
-    iconClass: "fas fa-dollar-sign",
-    child: [
-      {
-        listname: "sidebar.style1",
-        routepath: "/pricing/style1",
-        shortname: "ST"
-      },
-      {
-        listname: "sidebar.style2",
-        routepath: "/pricing/style2",
-        shortname: "ST"
-      }
-    ]
-  },
-  {
-    type: "heading",
-    name: "sidebar.uicomponents"
-  },
-  {
-    name: "sidebar.reactstrapcomponents",
-    iconClass: "fab fa-react",
-    child: [
-      {
-        listname: "sidebar.alerts",
-        routepath: "/alerts",
-        shortname: "AL"
-      },
-      {
-        listname: "sidebar.badges",
-        routepath: "/badge",
-        shortname: "BA"
-      },
-      {
-        listname: "sidebar.breadcrumbs",
-        routepath: "/breadcrumbs",
-        shortname: "BR"
-      },
-      {
-        listname: "sidebar.buttons",
-        routepath: "/buttons",
-        shortname: "BU"
-      },
-      {
-        listname: "sidebar.buttondropdown",
-        routepath: "/button-dropdown",
-        shortname: "BU"
-      },
-      {
-        listname: "sidebar.buttongroup",
-        routepath: "/button-group",
-        shortname: "BU"
-      },
-      {
-        listname: "sidebar.card",
-        routepath: "/card",
-        shortname: "CA"
-      },
-      {
-        listname: "sidebar.carousel",
-        routepath: "/carousel",
-        shortname: "CA"
-      },
-      {
-        listname: "sidebar.collapse",
-        routepath: "/collapse",
-        shortname: "CO"
-      },
-      {
-        listname: "sidebar.dropdowns",
-        routepath: "/dropdowns",
-        shortname: "DR"
-      },
-      {
-        listname: "sidebar.fade",
-        routepath: "/fade",
-        shortname: "FA"
-      },
-      {
-        listname: "sidebar.form",
-        routepath: "/form",
-        shortname: "FO"
-      },
-      {
-        listname: "sidebar.inputgroup",
-        routepath: "/input-group",
-        shortname: "IN"
-      },
-      {
-        listname: "sidebar.jumbotron",
-        routepath: "/jumbotron",
-        shortname: "JU"
-      },
-      {
-        listname: "sidebar.listgroup",
-        routepath: "/listgroup",
-        shortname: "LI"
-      },
-      {
-        listname: "sidebar.media",
-        routepath: "/media",
-        shortname: "ME"
-      },
-      {
-        listname: "sidebar.modals",
-        routepath: "/modals",
-        shortname: "MO"
-      },
-      {
-        listname: "sidebar.navbar",
-        routepath: "/navbar",
-        shortname: "NA"
-      },
-      {
-        listname: "sidebar.nav",
-        routepath: "/navs",
-        shortname: "NA"
-      },
-      {
-        listname: "sidebar.pagination",
-        routepath: "/pagination",
-        shortname: "PA"
-      },
-      {
-        listname: "sidebar.popovers",
-        routepath: "/popovers",
-        shortname: "PO"
-      },
-      {
-        listname: "sidebar.progress",
-        routepath: "/progress",
-        shortname: "PR"
-      },
-      {
-        listname: "sidebar.tables",
-        routepath: "/tables",
-        shortname: "TA"
-      },
-      {
-        listname: "sidebar.tabs",
-        routepath: "/tabs",
-        shortname: "TA"
-      },
-      {
-        listname: "sidebar.tooltips",
-        routepath: "/tooltips",
-        shortname: "TO"
-      }
-    ]
-  },
-  {
-    name: "sidebar.custombuttons",
-    routepath: "/custom-buttons",
-    iconClass: "fab fa-btc"
-  },
-  {
-    name: "sidebar.gridsystem",
-    routepath: "/gridsystem",
-    iconClass: "fas fa-th-large"
-  },
-  {
-    name: "sidebar.sweetalert",
-    routepath: "/alert",
-    iconClass: "fas fa-exclamation"
-  },
-  {
-    name: "sidebar.notifications",
-    routepath: "/notifications",
-    iconClass: "far fa-bell"
-  },
-  // {
-  //     name: "sidebar.widgets",
-  //     iconClass: "fas fa-chart-pie",
-  //     routepath: "/widgets"
-  // },
-  {
-    name: "sidebar.widgets",
-    iconClass: "fas fa-chart-pie",
-    child: [
-      {
-        listname: "sidebar.chartwidgets",
-        routepath: "/chart-widgets",
-        shortname: "CH"
-      },
-      {
-        listname: "sidebar.socialwidgets",
-        routepath: "/social-widgets",
-        shortname: "SO"
-      },
-      {
-        listname: "sidebar.blogwidgets",
-        routepath: "/blog-widgets",
-        shortname: "BL"
-      },
-      {
-        listname: "sidebar.statisticswidgets",
-        routepath: "/statistic-widgets",
-        shortname: "ST"
-      }
-    ]
-  },
-  {
-    name: "sidebar.charts",
-    iconClass: "fas fa-chart-line",
-    routepath: "/charts"
-  },
-  {
-    type: "heading",
-    name: "sidebar.others"
-  },
-  {
-    name: "sidebar.tables",
-    iconClass: "fas fa-table",
-    child: [
-      {
-        listname: "sidebar.regulartabels",
-        routepath: "/regulartabels",
-        shortname: "RE"
-      },
-      {
-        listname: "sidebar.reacttables",
-        routepath: "/reacttables",
-        shortname: "RE"
-      }
-    ]
-  },
-  {
-    name: "sidebar.maps",
-    iconClass: "fas fa-map-marker-alt",
-    child: [
-      {
-        listname: "sidebar.googlemaps",
-        routepath: "/google-maps",
-        shortname: "GO"
-      },
-      {
-        listname: "sidebar.tracking-vehicle",
-        routepath: "/tracking-vehicle",
-        shortname: "TR"
-      }
-    ]
-  },
-  {
-    name: "sidebar.gauges",
-    iconClass: "fas fa-toolbox",
-    routepath: "/gauges"
-  },
-  {
-    type: "heading",
-    name: "sidebar.menuexamples"
-  },
-  {
-    name: "sidebar.single",
-    iconClass: "fab fa-stripe-s",
-    routepath: "/single"
-  },
-  {
-    name: "sidebar.onelevel",
-    iconClass: "fas fa-expand",
-    child: [
-      {
-        listname: "sidebar.example",
-        routepath: "/ex",
-        shortname: "Ex"
-      }
-    ]
-  },
-  {
-    name: "sidebar.secondlevel",
-    iconClass: "fas fa-expand",
-    child: [
-      {
-        listname: "sidebar.example",
-        iconClass: "fas fa-plus",
-        child: [
+        listname: "sidebar.transaction",
+        shortname: "EU",
+        iconClass: "fas fa-balance-scale",
+        isNew: false,
+        child:[
           {
-            listname: "sidebar.example1",
-            routepath: "/ex1",
-            shortname: "Ex"
+            listname: "sidebar.employeeinsert",
+            routepath: "/insertemployee",
+            shortname: "EU",
+            isNew: false,
           },
           {
-            listname: "sidebar.example2",
-            routepath: "/ex2",
-            shortname: "Ex"
+            listname: "sidebar.employeemovement",
+            routepath: "/employeemovement",
+            shortname: "EM",
+            isNew: false
           }
         ]
       }
     ]
   }
+
 ];
 
 export const HorizontalSidebarData = [
