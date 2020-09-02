@@ -93,22 +93,11 @@ const Sidebar = props => {
   }
 
   return (
-    <SidebarWrapper
-      themeSetting={themeSetting}
-      sidebarTheme={sidebarTheme}
-      layoutTheme={layoutTheme}
-      mini={mini}
-      miniDrawerWidth={miniDrawerWidth}
-      drawerWidth={drawerWidth}
-    >
+    <SidebarWrapper themeSetting={themeSetting} sidebarTheme={sidebarTheme} layoutTheme={layoutTheme} mini={mini} miniDrawerWidth={miniDrawerWidth} drawerWidth={drawerWidth} >
+
       {!mini && <div className="sidebar-overlay" onClick={closeDrawer()}></div>}
-      <div
-        id="sidebar"
-        className="sidebar sideBack"
-        style={sidebar}
-        onMouseEnter={onMouseEnter}
-        onMouseLeave={onMouseLeave}
-      >
+
+      <div id="sidebar" className="sidebar sideBack" style={sidebar} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} >
         <div className="sidebar-header">
           <NavLink to={"/"} className="simple-text logo-mini">
             <div className="logo-img">
@@ -117,16 +106,10 @@ const Sidebar = props => {
           </NavLink>
           <div className="logo-text simple-text fs-20 bold-text">{AppName}</div>
         </div>
-        <div
-          className="close-drawer-icon"
-          style={closeIcon}
-          onClick={closeDrawer()}
-        >
+        <div className="close-drawer-icon" style={closeIcon} onClick={closeDrawer()} >
           <i className="fas fa-times-circle" />
         </div>
-        <Scrollbars
-          autoHide
-          style={sideScrollStyle}
+        <Scrollbars autoHide style={sideScrollStyle}
           renderThumbVertical={({ style, ...props }) => (
             <div {...props} className="sidebar-scrollbar-style" />
           )}
@@ -150,37 +133,28 @@ const Sidebar = props => {
           <div className="sidebar-wrapper">
             <ul className="nav">
               {sidebarData.map((list, i) => {
+                
                 return (
                   <Fragment key={i}>
-                    {list.type && list.type === "heading" ? (
+                    {list.type && list.type === "heading" 
+                    ? 
+                    (
                       (!mini || miniDrawerWidth === drawerWidth) && (
                         <div className="sidelist-header-name">
                           {
                             <Fragment>
                               <IntlMessages id={list.name} />
                               {list.hasOwnProperty("isNew") && list["isNew"] && (
-                                <span
-                                  style={{
-                                    right: "23px"
-                                  }}
-                                  className="new-update-tag fs-13 bold-text"
-                                >
-                                  New
-                                </span>
+                                <span style={{ right: "23px" }} className="new-update-tag fs-13 bold-text" > New </span>
                               )}
                             </Fragment>
                           }
                         </div>
                       )
-                    ) : (
-                      <NavList
-                        listNameStyle={listNameStyle}
-                        list={list}
-                        mini={mini}
-                        miniDrawerWidth={miniDrawerWidth}
-                        drawerWidth={drawerWidth}
-                        {...props}
-                      />
+                    ) 
+                    : 
+                    (
+                      <NavList listNameStyle={listNameStyle} list={list} mini={mini} miniDrawerWidth={miniDrawerWidth} drawerWidth={drawerWidth} {...props} />
                     )}
                   </Fragment>
                 );
