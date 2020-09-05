@@ -1,24 +1,20 @@
 import React from "react";
-import { connect } from "react-redux";
 import { TaskWidget } from "components/widgets/taskWidget/TaskWidget";
 import { taskData } from "util/data/taskData";
 import PageviewsChartWidget from "components/widgets/pageviewsChartWidget/PageviewsChartWidget";
 import AnalyticsProcessWidgets from "components/widgets/analyticsProcessWidgets/AnalyticsProcessWidgets";
-import {
-  MiniLineBackgroundWidget,
-  BottomCardLinechartWidget,
-  BottomCardLinechartSecondWidget,
-  MyBalanceWidget,
-  SalePrediction,
-  UserInfoDoughnutWidget,
-  MiniLineChartWidget
-} from "components/widgets/chartwidgets";
+import { MiniLineBackgroundWidget, BottomCardLinechartWidget, BottomCardLinechartSecondWidget, MyBalanceWidget,
+  SalePrediction, UserInfoDoughnutWidget, MiniLineChartWidget } from "components/widgets/chartwidgets";
 
 import LatestActivity from "components/widgets/latestactivity/LatestActivity";
 
 import { LinearProgressWidget } from "components/widgets/statisticswidgets";
 
 const Dashboard = ({ sidebarTheme, layoutTheme }) => {
+
+  layoutTheme = {}
+  layoutTheme.themeName = 'theme6';
+
   return (
     <div>
       <div>
@@ -100,11 +96,7 @@ const Dashboard = ({ sidebarTheme, layoutTheme }) => {
               progressColor="#1D2B64"
               info="30% Income increase"
               dark={layoutTheme.themeName === "theme6" ? true : false}
-              background={
-                layoutTheme.themeName === "theme6"
-                  ? "rgba(68,70,79,0.5)"
-                  : "#fff"
-              }
+              background={ layoutTheme.themeName === "theme6" ? "rgba(68,70,79,0.5)" : "#fff" }
             />
           </div>
 
@@ -116,11 +108,7 @@ const Dashboard = ({ sidebarTheme, layoutTheme }) => {
               progressColor="#1FA2FF"
               info="50% Expenses increase"
               dark={layoutTheme.themeName === "theme6" ? true : false}
-              background={
-                layoutTheme.themeName === "theme6"
-                  ? "rgba(68,70,79,0.5)"
-                  : "#fff"
-              }
+              background={ layoutTheme.themeName === "theme6" ? "rgba(68,70,79,0.5)" : "#fff" }
             />
           </div>
 
@@ -132,11 +120,7 @@ const Dashboard = ({ sidebarTheme, layoutTheme }) => {
               progressColor="#614385"
               info="45% Spendings increase"
               dark={layoutTheme.themeName === "theme6" ? true : false}
-              background={
-                layoutTheme.themeName === "theme6"
-                  ? "rgba(68,70,79,0.5)"
-                  : "#fff"
-              }
+              background={ layoutTheme.themeName === "theme6" ? "rgba(68,70,79,0.5)" : "#fff" }
             />
           </div>
 
@@ -148,11 +132,7 @@ const Dashboard = ({ sidebarTheme, layoutTheme }) => {
               progressColor="#3D7EAA"
               info="37% Totals increase"
               dark={layoutTheme.themeName === "theme6" ? true : false}
-              background={
-                layoutTheme.themeName === "theme6"
-                  ? "rgba(68,70,79,0.5)"
-                  : "#fff"
-              }
+              background={ layoutTheme.themeName === "theme6" ? "rgba(68,70,79,0.5)" : "#fff" }
             />
           </div>
         </div>
@@ -182,10 +162,6 @@ const Dashboard = ({ sidebarTheme, layoutTheme }) => {
     </div>
   );
 };
-const mapStateToProps = state => {
-  return {
-    ...state.themeChanger
-  };
-};
 
-export default connect(mapStateToProps, null)(Dashboard);
+
+export default Dashboard;

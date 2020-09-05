@@ -1,4 +1,4 @@
-export const AppName = "Roe Admin";
+export const AppName = "HR STANDARD";
 export const drawerWidth = "260px";
 export const miniDrawerWidth = "80px";
 export const themeSettingDrawerWidth = "300px";
@@ -9,6 +9,7 @@ export const brownShoe = require("assets/images/brown-shoe.jpeg");
 export const speaker = require("assets/images/speaker.jpeg");
 export const loginBack = require("assets/images/loginback.jpg");
 export const iconDemo = require("assets/images/roelogo.png");
+export const appLogoIcon = require("assets/images/hr-standard-logo.png");
 export const roelogo2 = require("assets/images/roelogo2.png");
 export const ForgotIcon = require("assets/images/forgotpassword.svg");
 export const locakscreenBack = require("assets/images/lockscreen.jpg");

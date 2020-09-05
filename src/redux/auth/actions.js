@@ -18,4 +18,4 @@ const authActions = {
     }
 }
 
-export default authActions
+export default authActions;

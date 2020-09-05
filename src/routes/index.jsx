@@ -1,15 +1,6 @@
 import Layout from "layouts/DashboardLayout.jsx";
 
-import {
-    LockScreen,
-    Login,
-    Register,
-    Error400,
-    ForgotPassword,
-    Error500,
-    PricingStyle1,
-    PricingStyle2
-} from "./../views/pages/index";
+import { LockScreen, Login, Register, Error400, ForgotPassword, Error500, PricingStyle1, PricingStyle2 } from "./../views/pages/index";
 
 const indexRoutes = [
     { path: "/pricing/style1", component: PricingStyle1 },

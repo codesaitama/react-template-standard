@@ -9,11 +9,7 @@ import themeActions from "redux/themeChanger/actions.js";
 import settingactions from "redux/themeSettings/actions";
 import AppLocale from "languageProvider";
 import { Button } from "reactstrap";
-import {
-    drawerWidth,
-    miniDrawerWidth,
-    themeSettingDrawerWidth
-} from "helper/constant";
+import { drawerWidth, miniDrawerWidth, themeSettingDrawerWidth } from "helper/constant";
 import { Route, Switch } from "react-router-dom";
 import { connect } from "react-redux";
 import { IntlProvider } from "react-intl";
@@ -24,17 +20,11 @@ const { changeTheme } = themeActions;
 const { sidebarMini } = settingactions;
 
 const DashboardLayout = props => {
-    const [mini, setMini] = useState(
-        props.themeSetting.sidebarMiniValue
-            ? props.themeSetting.sidebarMiniValue === "on"
-            : false
-    );
+    const [mini, setMini] = useState( props.themeSetting.sidebarMiniValue ? props.themeSetting.sidebarMiniValue === "on" : false );
     const [themeDrawer, setThemeDrawer] = useState(true);
     const [layoutSettingDrawer, setLayoutSettingDrawer] = useState(true);
     const [statedrawerWidth] = useState(drawerWidth);
-    const [stateminiDrawerWidth, setStateminiDrawerWidth] = useState(
-        miniDrawerWidth
-    );
+    const [stateminiDrawerWidth, setStateminiDrawerWidth] = useState( miniDrawerWidth );
     const mainPanel = useRef(null);
     const scrollbars = useRef(null);
 
@@ -165,12 +155,7 @@ const DashboardLayout = props => {
                     {...props}
                 />
 
-                <div
-                    id="main-panel"
-                    className="main-panel flex-y"
-                    ref={mainPanel}
-                    style={mainPanelWidth}
-                >
+                <div id="main-panel" className="main-panel flex-y" ref={mainPanel} style={mainPanelWidth} >
                     <div>
                         {
                             themeSetting.layout === "horizontal" &&
@@ -194,14 +179,7 @@ const DashboardLayout = props => {
                             )
                         }
                     </div>
-                    <Button
-                        className="setting-button"
-                        onClick={themeSettingDrawer}
-                        style={{
-                            backgroundColor: "white",
-                            color: 'rgba(0,0,0,.87)'
-                        }}
-                    >
+                    <Button className="setting-button" onClick={themeSettingDrawer} style={{ backgroundColor: "white", color: 'rgba(0,0,0,.87)' }} >
                         <i className="fas fa-cogs" />
                     </Button>
 
@@ -220,19 +198,16 @@ const DashboardLayout = props => {
                         className="route-height flex-1 overflow-auto"
                         style={
                             themeSetting.toolbarDisplayValue === "show"
-                                ? {
-                                    background:
-                                        layoutTheme.backgroundColor
-                                }
-                                : {
-                                    background:
-                                        layoutTheme.backgroundColor
-                                }
+                                ? 
+                                { background: layoutTheme.backgroundColor }
+                                : 
+                                { background: layoutTheme.backgroundColor }
                         }
                     >
                         <Switch>
                             <ProtectedRoute {...props}>
                                 {dashboardRoutes.map((prop, key) => {
+                                    
                                     return (
                                         <Route
                                             exact
@@ -282,10 +257,8 @@ const mapStateToProps = state => {
             activeLinkStyle: state.themeSetting.activeLinkStyle,
             sidebarMiniValue: state.themeSetting.sidebarMiniValue,
             layout: state.themeSetting.layout,
-            sidebarTransParentActiveBack:
-                state.themeSetting.sidebarTransParentActiveBack,
-            sidebarTransParentActiveColor:
-                state.themeSetting.sidebarTransParentActiveColor
+            sidebarTransParentActiveBack: state.themeSetting.sidebarTransParentActiveBack,
+            sidebarTransParentActiveColor: state.themeSetting.sidebarTransParentActiveColor
         }
     };
 };

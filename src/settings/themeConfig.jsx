@@ -19,6 +19,18 @@ const topbarTheme = {
   defaultTheme: themeConfig.topbar,
   options: [
     {
+      themeName: "hr_standard_topbar",
+      buttonBackColor: "#B8C6DB",
+      buttonColor: "linear-gradient(45deg,#F5F7FA,#B8C6DB)",
+      backgroundColor: "linear-gradient(45deg,#F5F7FA,#B8C6DB)",
+      textColor: "rgba(0, 0, 0, .65)",
+      badgeBackColor: "#5C258D",
+      badgeTextColor: "#fff",
+      breadCumbActiveColor: "#5C258D",
+      horSidebarActiveBackColor: "rgba(0,0,0,.05)",
+      horSidebarActiveTextColor: "#000"
+    },
+    {
       themeName: "dark",
       buttonBackColor: "rgba(0, 0, 0, .1)",
       buttonColor: "#222437",
@@ -173,6 +185,16 @@ const sidebarTheme = {
   defaultTheme: themeConfig.sidebar,
   options: [
     {
+      themeName: "hr_standard_sidebar",
+      backgroundColor: "linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(15,37,84,1) 35%, rgba(0,212,255,1) 100%)",
+      textColor: "rgba(255,255,255,.85)",
+      activeRouteTextColor: "#480048",
+      buttonColor: "rgba(0,0,0,.2)",
+      activeRouteBackColor: "#FFF",
+      style4VarientActiveTextColor: "#F4C95D",
+      sideOpenListBackground: "rgba(0, 0, 0, .05)"
+    },
+    {
       themeName: "sky",
       backgroundColor: "linear-gradient(45deg,#480048, #0ABFBC)",
       textColor: "rgba(255,255,255,.85)",
@@ -306,6 +328,14 @@ const layoutTheme = {
   defaultTheme: themeConfig.layout,
   options: [
     {
+      themeName: "hr_standard_theme",
+      buttonColor: "#fafafa",
+      backgroundColor: "rgb(249, 249, 249)",
+      cardBackground: "#fff",
+      headingColor: "#6a727a",
+      textColor: "#000"
+    },
+    {
       themeName: "themedefault",
       buttonColor: "#fafafa",
       backgroundColor: "rgb(249, 249, 249)",
@@ -377,6 +407,14 @@ const footerTheme = {
   label: "themeChanger.footer",
   defaultTheme: themeConfig.footer,
   options: [
+    {
+      themeName: "hr_standard_footer",
+      buttonBackColor: "rgba(0, 0, 0, .1)",
+      buttonColor: "linear-gradient(45deg,#5C258D,#4389A2)",
+      backgroundColor: "linear-gradient(45deg,#F5F7FA,#B8C6DB)",
+      textColor: "rgba(0, 0, 0, .65)",
+      type: "gredient"
+    },
     {
       themeName: "dark",
       buttonBackColor: "rgba(0, 0, 0, .1)",

@@ -1,25 +1,7 @@
-import Chat from "views/app/Chat";
-import Dashboard from "views/app/dashboards/Dashboard";
-import Contact from "views/app/Contact";
-import Scrumboard from "views/app/Scrumboard";
-import Calender from "views/app/Calender";
-import FileManager from "views/app/FileManager";
-import Todos from "views/app/Todos";
-import Analytics from "views/app/dashboards/Analytics";
-import ECommerce from "views/app/dashboards/ECommerce";
+import EmployeeInsert from './employee/EmployeeInsert';
+import Analytics from 'views/app/dashboards/Analytics';
+import Dashboard from 'views/app/dashboards/Dashboard';
+import ECommerce from 'views/app/dashboards/ECommerce';
 
-import EmployeeInsert from "views/app/employee/EmployeeInsert";
 
-export {
-  Chat,
-  Dashboard,
-  Contact,
-  Scrumboard,
-  Calender,
-  FileManager,
-  Todos,
-  Analytics,
-  ECommerce,
-  
-  EmployeeInsert
-};
+export {EmployeeInsert, Analytics, Dashboard, ECommerce}

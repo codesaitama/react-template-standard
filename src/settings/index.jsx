@@ -2,9 +2,9 @@ const sidebar1 = require('assets/images/sidebar1.jpg');
 //  you can import sidebar1, sidebar2, .... up to sidebar8 
 
 const themeConfig = {
-  sidebar: 'gredient1', // You can put light, dark, gredient1, gredient2, gredient3.....up to...gredient8 as per your need
-  topbar: 'gredient1', // You can put light, dark, gredient1, gredient2, gredient3.....up to...gredient8 as per your need
-  footer: 'gredient1', // You can put light, dark, gredient1, gredient2, gredient3.....up to...gredient8 as per your need
+  sidebar: 'hr_standard_sidebar', // You can put light, dark, gredient1, gredient2, gredient3.....up to...gredient8 as per your need
+  topbar: 'hr_standard_topbar', // You can put light, dark, gredient1, gredient2, gredient3.....up to...gredient8 as per your need
+  footer: 'hr_standard_footer', // You can put light, dark, gredient1, gredient2, gredient3.....up to...gredient8 as per your need
   layout: 'themedefault', // You can put theme1, theme2, theme3.....up to...theme7
   theme: 'themedefault', // Theme is fix you can not change
 };

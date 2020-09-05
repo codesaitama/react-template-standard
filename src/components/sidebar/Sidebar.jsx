@@ -3,7 +3,7 @@ import SidebarWrapper from "./sidebar.style";
 import Radium from "radium";
 import NavList from "components/sidebar/NavList";
 import { sidebarData } from "util/data/sidebar";
-import { iconDemo, AppName } from "helper/constant";
+import { appLogoIcon, AppName } from "helper/constant";
 import { Scrollbars } from "react-custom-scrollbars";
 import { NavLink } from "react-router-dom";
 import IntlMessages from "util/intlMessages";
@@ -13,41 +13,16 @@ const Sidebar = props => {
   let sidebar;
   let sideScrollStyle;
 
-  const {
-    mini,
-    drawerWidth,
-    miniDrawerWidth,
-    onMouseEnter,
-    onMouseLeave,
-    sidebarTheme,
-    layoutTheme,
-    closeDrawer,
-    themeSetting
-  } = props;
+  const { mini, drawerWidth, miniDrawerWidth, onMouseEnter, onMouseLeave, sidebarTheme, layoutTheme, closeDrawer, themeSetting } = props;
 
-  if (
-    themeSetting.toolbarAlignValue === "above" &&
-    themeSetting.footerAlignValue === "above"
-  ) {
-    sideScrollStyle = {
-      zIndex: 5,
-      height: "calc(100vh - 190px)"
-    };
+  if ( themeSetting.toolbarAlignValue === "above" && themeSetting.footerAlignValue === "above" ) {
+    sideScrollStyle = { zIndex: 5, height: "calc(100vh - 190px)" };
   } else if (themeSetting.toolbarAlignValue === "above") {
-    sideScrollStyle = {
-      zIndex: 5,
-      height: "calc(100vh - 145px)"
-    };
+    sideScrollStyle = { zIndex: 5, height: "calc(100vh - 145px)" };
   } else if (themeSetting.footerAlignValue === "above") {
-    sideScrollStyle = {
-      zIndex: 5,
-      height: "calc(100vh - 128px)"
-    };
+    sideScrollStyle = { zIndex: 5, height: "calc(100vh - 128px)" };
   } else {
-    sideScrollStyle = {
-      zIndex: 5,
-      height: "calc(100vh - 75px)"
-    };
+    sideScrollStyle = { zIndex: 5, height: "calc(100vh - 75px)" };
   }
 
   if (themeSetting.sidebarTransParentValue === "on") {
@@ -57,9 +32,7 @@ const Sidebar = props => {
       backgroundPosition: "center",
       backgroundSize: "cover",
       width: mini ? miniDrawerWidth : drawerWidth,
-      "@media (max-width: 991.98px)": {
-        width: mini ? 0 : drawerWidth
-      }
+      "@media (max-width: 991.98px)": { width: mini ? 0 : drawerWidth }
     };
   } else {
     sidebar = {
@@ -94,14 +67,12 @@ const Sidebar = props => {
 
   return (
     <SidebarWrapper themeSetting={themeSetting} sidebarTheme={sidebarTheme} layoutTheme={layoutTheme} mini={mini} miniDrawerWidth={miniDrawerWidth} drawerWidth={drawerWidth} >
-
       {!mini && <div className="sidebar-overlay" onClick={closeDrawer()}></div>}
-
       <div id="sidebar" className="sidebar sideBack" style={sidebar} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} >
         <div className="sidebar-header">
           <NavLink to={"/"} className="simple-text logo-mini">
             <div className="logo-img">
-              <img src={iconDemo} alt="react-logo" />
+              <img src={appLogoIcon} alt="react-logo" />
             </div>
           </NavLink>
           <div className="logo-text simple-text fs-20 bold-text">{AppName}</div>
@@ -109,52 +80,47 @@ const Sidebar = props => {
         <div className="close-drawer-icon" style={closeIcon} onClick={closeDrawer()} >
           <i className="fas fa-times-circle" />
         </div>
-        <Scrollbars autoHide style={sideScrollStyle}
-          renderThumbVertical={({ style, ...props }) => (
-            <div {...props} className="sidebar-scrollbar-style" />
-          )}
+        <Scrollbars autoHide style={sideScrollStyle} renderThumbVertical={({ style, ...props }) => ( <div {...props} className="sidebar-scrollbar-style" /> )}
           renderThumbHorizontal={({ style, ...props }) => <div {...props} />}
+
           renderTrackVertical={({ style, ...props }) => (
-            <div
-              {...props}
-              style={{
-                ...style,
-                zIndex: 5,
-                position: "absolute",
-                width: "6px",
-                right: "2px",
-                bottom: "2px",
-                top: "2px",
-                borderRadius: "3px"
-              }}
-            />
-          )}
-        >
+            <div {...props} style={{ ...style, zIndex: 5, position: "absolute", width: "6px", right: "2px", bottom: "2px", top: "2px", borderRadius: "3px" }} />
+          )} >
+            
           <div className="sidebar-wrapper">
             <ul className="nav">
               {sidebarData.map((list, i) => {
-                
                 return (
                   <Fragment key={i}>
-                    {list.type && list.type === "heading" 
-                    ? 
-                    (
+                    {list.type && list.type === "heading" ? (
                       (!mini || miniDrawerWidth === drawerWidth) && (
                         <div className="sidelist-header-name">
                           {
                             <Fragment>
                               <IntlMessages id={list.name} />
                               {list.hasOwnProperty("isNew") && list["isNew"] && (
-                                <span style={{ right: "23px" }} className="new-update-tag fs-13 bold-text" > New </span>
+                                <span
+                                  style={{
+                                    right: "23px"
+                                  }}
+                                  className="new-update-tag fs-13 bold-text"
+                                >
+                                  New
+                                </span>
                               )}
                             </Fragment>
                           }
                         </div>
                       )
-                    ) 
-                    : 
-                    (
-                      <NavList listNameStyle={listNameStyle} list={list} mini={mini} miniDrawerWidth={miniDrawerWidth} drawerWidth={drawerWidth} {...props} />
+                    ) : (
+                      <NavList
+                        listNameStyle={listNameStyle}
+                        list={list}
+                        mini={mini}
+                        miniDrawerWidth={miniDrawerWidth}
+                        drawerWidth={drawerWidth}
+                        {...props}
+                      />
                     )}
                   </Fragment>
                 );

@@ -1,7 +1,6 @@
 import React from "react";
 import enhancer from "components/contact/ContactEnhancer";
 import { compose } from "redux";
-import Button from "components/button/Button";
 
 const ContactForm = props => {
     const handleSubmit = e => {
@@ -79,12 +78,6 @@ const ContactForm = props => {
                         placeholder="Phone Number"
                     />
                     <Error field="mobile" />
-                </div>
-
-                <div className="text-center">
-                    <Button type="submit" className="c-btn c-dark">
-                        Submit
-                    </Button>
                 </div>
             </form>
         </div>

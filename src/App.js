@@ -17,10 +17,10 @@ import { PersistGate } from "redux-persist/integration/react";
 import "./assets/scss/app.scss";
 import "pretty-checkbox/src/pretty-checkbox.scss";
 
-const currentAppLocale = AppLocale[getCurrentLanguage(config.defaultLanguage || "english").locale];
+const currentAppLocale =
+  AppLocale[getCurrentLanguage(config.defaultLanguage || "english").locale];
 
 const App = props => {
-  
   return (
     <Fragment>
       <IntlProvider locale={currentAppLocale.locale} messages={currentAppLocale.messages} >
@@ -34,8 +34,9 @@ const App = props => {
                     <Route exact path="/"  render={() => <Redirect to="/dashboard" />}
                     />
                     {layoutRoutes.map((prop, key) => {
-                      
-                      return ( <Route path={prop.path} component={prop.component} key={key} history={history} /> );
+                      return (
+                        <Route path={prop.path} component={prop.component} key={key} history={history} />
+                      );
                     })}
                   </Switch>
                 </Router>

@@ -7,7 +7,11 @@ import classNames from "classnames";
 const NavSecondChild = props => {
     const [collapse, setCollapse] = useState(false);
     useEffect(() => {
-        if (props.childList.child.map(a => a.routepath).includes(props.CurrentRoute)) {
+        if (
+            props.childList.child
+                .map(a => a.routepath)
+                .includes(props.CurrentRoute)
+        ) {
             setCollapse(true);
         }
     }, [props.CurrentRoute, props.childList.child]);
@@ -19,17 +23,15 @@ const NavSecondChild = props => {
         miniDrawerWidth,
         CurrentRoute
     } = props;
-
-    const toggle = e => { e.preventDefault(); setCollapse(!collapse); };
-
-    console.log(miniDrawerWidth);
-
+    const toggle = e => {
+        e.preventDefault();
+        setCollapse(!collapse);
+    };
     return (
         <ul className="pa-0">
             <li className="pos-relative">
                 {!mini || miniDrawerWidth === drawerWidth ? (
-                    collapse ? 
-                    (
+                    collapse ? (
                         <i
                             className="fas fa-angle-up arrow-sidebar second-child-list-icon"
                             onClick={toggle}
@@ -40,16 +42,16 @@ const NavSecondChild = props => {
                             onClick={toggle}
                         />
                     )
-                ) 
-                :
-                 (
+                ) : (
                     ""
-                )
-                }
-
-                <NavLink to={"demo"} onClick={toggle}
+                )}
+                <NavLink
+                    to={"demo"}
+                    onClick={toggle}
                     className={classNames(
-                        childList.child.map(a => a.routepath).includes(CurrentRoute) && "active",
+                        childList.child
+                            .map(a => a.routepath)
+                            .includes(CurrentRoute) && "active",
                         "nav-link",
                         "main-list"
                     )}
@@ -65,7 +67,11 @@ const NavSecondChild = props => {
                             {childList.child
                                 ? childList.child.map((listData, i) => {
                                       return (
-                                          <NavLink to={listData.routepath} className="nav-link child-list" key={i} >
+                                          <NavLink
+                                              to={listData.routepath}
+                                              className="nav-link child-list"
+                                              key={i}
+                                          >
                                               <span className="span-shortname">
                                                   {listData.shortname}
                                               </span>

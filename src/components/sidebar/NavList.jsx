@@ -10,11 +10,10 @@ const NavList = props => {
 
   useEffect(() => {
     if (props.list.child) {
-
-      const finalList = props.list.child.filter( a => !a.hasOwnProperty("child"));
-
+      const finalList = props.list.child.filter(
+        a => !a.hasOwnProperty("child")
+      );
       const threeList = props.list.child.filter(a => a.hasOwnProperty("child"));
-      
       const finalThreelevel = [];
       if (threeList.length) {
         threeList.forEach(element => {
@@ -111,7 +110,12 @@ const NavList = props => {
           <p style={listNameStyle}>
             {<IntlMessages id={list.name} />}
             {list.hasOwnProperty("isNew") && list["isNew"] && (
-              <span style={{ right: "23px" }} className="new-update-tag fs-13 bold-text" >  New </span>
+              <span
+                style={{ right: "23px" }}
+                className="new-update-tag fs-13 bold-text"
+              >
+                New
+              </span>
             )}
           </p>
         </NavLink>
@@ -128,13 +132,16 @@ const NavList = props => {
                 ? list.child.map((childList, i) => {
                     return (
                       <Fragment key={i}>
-                        {childList.child 
-                        ? 
-                        (
-                          <NavSecondChild CurrentRoute={CurrentRoute} listNameStyle={listNameStyle} childList={childList} mini={mini} miniDrawerWidth={miniDrawerWidth} drawerWidth={drawerWidth} />
-                        ) 
-                        : 
-                        (
+                        {childList.child ? (
+                          <NavSecondChild
+                            CurrentRoute={CurrentRoute}
+                            listNameStyle={listNameStyle}
+                            childList={childList}
+                            mini={mini}
+                            miniDrawerWidth={miniDrawerWidth}
+                            drawerWidth={drawerWidth}
+                          />
+                        ) : (
                           <NavLink
                             to={childList.routepath}
                             className="nav-link child-list"

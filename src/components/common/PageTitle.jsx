@@ -17,8 +17,7 @@ const PageTitle = ({ title, sidebarTheme, className, breadCrumb }) => {
                 {breadCrumb && (
                     <div>
                         <Breadcrumb className="custom-breadcumb">
-                            {breadCrumb &&
-                                breadCrumb.map((e, i) => {
+                            {breadCrumb && breadCrumb.map((e, i) => {
                                     if (i === breadCrumb.length - 1) {
                                         return (
                                             <BreadcrumbItem key={i} active>
