@@ -1,9 +1,9 @@
 {
-  "short_name": "Roe Admin",
-  "name": "React Roe Admin",
+  "short_name": "HR Standard",
+  "name": "HCM HR Standard",
   "icons": [
     {
-      "src": "./roelogo.png",
+      "src": "./hr-standard-logo.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     }
