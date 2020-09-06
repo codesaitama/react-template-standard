@@ -21,6 +21,15 @@ body {
   overflow: hidden;
 }
 
+html p,
+html div {
+  font-size: 12px;
+}
+
+.table tr {
+  line-height: 12px;
+}
+
 html h1,
 html h2,
 html h3,
