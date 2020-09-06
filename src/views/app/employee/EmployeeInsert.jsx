@@ -7,7 +7,7 @@ import ContactWrapper from "components/contact/contact.style";
 import { contactList } from "util/data/contacts";
 import { remove, findIndex, filter } from "lodash";
 import ContactForm from "components/contact/ContactForm";
-import { Modal, ModalHeader, ModalBody,ModalFooter  } from "reactstrap";
+import { Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import Button from "components/button/Button";
 
 const EmployeeInsert = props => {
@@ -141,21 +141,34 @@ const EmployeeInsert = props => {
 
   const handleFormSubmit = data => {
     if (currentModelAction === "add") {
-      const obj = { ...data, id: Math.random(), profile: null, isfav: false, isfrequent: false };
+      const obj = {
+        ...data,
+        id: Math.random(),
+        profile: null,
+        isfav: false,
+        isfrequent: false
+      };
 
       const filteredContactlistsTem = filteredContactlists;
 
       filteredContactlistsTem.splice(0, 0, obj);
       setFilteredContactlists(filteredContactlistsTem);
       contactToggleModel();
-    } 
-    else if (currentModelAction === "edit") {
+    } else if (currentModelAction === "edit") {
       const editedContentTem = editedContent;
       const filteredContactlistsTem = filteredContactlists;
 
-      const obj = { ...data, id: editedContentTem.id, profile: editedContentTem.profile, isfav: editedContentTem.isfav, isfrequent: editedContentTem.isfrequent };
+      const obj = {
+        ...data,
+        id: editedContentTem.id,
+        profile: editedContentTem.profile,
+        isfav: editedContentTem.isfav,
+        isfrequent: editedContentTem.isfrequent
+      };
 
-      const index = findIndex(filteredContactlistsTem, { id: editedContentTem.id });
+      const index = findIndex(filteredContactlistsTem, {
+        id: editedContentTem.id
+      });
 
       filteredContactlistsTem.splice(index, 1, obj);
       setFilteredContactlists(filteredContactlistsTem);
@@ -165,7 +178,6 @@ const EmployeeInsert = props => {
   return (
     <ContactWrapper {...props}>
       <div className="contact-container">
-
         <PageTitle title="sidebar.employee" />
 
         <div className="flex plr-15 mobile-spacing-class">
@@ -192,9 +204,19 @@ const EmployeeInsert = props => {
         </div>
       </div>
 
-      <Modal centered isOpen={contactModel} fade={false} toggle={contactToggleModel} className={props.className}>
+      <Modal
+        centered
+        isOpen={contactModel}
+        fade={false}
+        toggle={contactToggleModel}
+        className={props.className}
+      >
         <ModalHeader toggle={contactToggleModel}>
-          {currentModelAction === "add" ? ( <span>Add Employee</span> ) : ( <span>Edit Employee</span> )}
+          {currentModelAction === "add" ? (
+            <span>Add Employee</span>
+          ) : (
+            <span>Edit Employee</span>
+          )}
         </ModalHeader>
         <ModalBody>
           <ContactForm
@@ -204,10 +226,14 @@ const EmployeeInsert = props => {
         </ModalBody>
         <ModalFooter>
           <Button className="c-btn ma-5 c-light">Cancel</Button>
-          <Button className="c-btn ma-5 c-success">Submit </Button>        
+          <Button
+            className="c-btn ma-5 c-success"
+            onClick={data => handleFormSubmit(data)}
+          >
+            Submit{" "}
+          </Button>
         </ModalFooter>
       </Modal>
-
     </ContactWrapper>
   );
 };
@@ -222,7 +248,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(
-  mapStateToProps,
-  null
-)(EmployeeInsert);
+export default connect(mapStateToProps, null)(EmployeeInsert);
