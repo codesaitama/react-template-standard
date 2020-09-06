@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Table } from "reactstrap";
 import { Scrollbars } from "react-custom-scrollbars";
-import { InputGroup, InputGroupAddon, Input } from 'reactstrap';
+import { InputGroup, InputGroupAddon, Input } from "reactstrap";
 import Button from "components/button/Button";
 
 const ContactList = ({
@@ -20,33 +20,44 @@ const ContactList = ({
   //const [selectDrp, SetselectDrp] = useState(false);
   const [isSearch, setIsSearch] = useState(false);
   // const [filterDrp, setFilterDrp] = useState(false);
-  const selectContact = e => { selectValue(e.target.value); };
+  const selectContact = e => {
+    selectValue(e.target.value);
+  };
 
   return (
     <div className="right-panel roe-box-shadow">
-       <div className="contact-list-header">
+      <div className="contact-list-header">
         <div className="contact-action-dropdown flex-1">
           <InputGroup size="sm">
             <Input placeholder="username" />
             <InputGroupAddon addonType="append">
-            <Button className="c-outline-primary">
-              <i className="fas fa-search"></i>
-            </Button>
+              <Button className="c-outline-primary c-primary">
+                <i className="fas fa-search"></i>
+              </Button>
             </InputGroupAddon>
           </InputGroup>
         </div>
-        <div className="contact-action-dropdown flex-1"></div> 
-        <div className="contact-action-dropdown flex-1"></div>       
+        <div className="contact-action-dropdown flex-1"></div>
+        <div className="contact-action-dropdown flex-1"></div>
         {!isSearch && (
-          <div className="flex center">            
+          <div className="flex center">
             <div>
-              <button className="c-btn c-primary ma-5" onClick={() => actiononContact("add", null)}>Add</button>
-            </div>            
+              <button
+                className="c-btn c-primary ma-5"
+                onClick={() => actiononContact("add", null)}
+              >
+                Add
+              </button>
+            </div>
           </div>
         )}
       </div>
       <div className="contact-table">
-        <Scrollbars autoHide className="contact-scroll-height" style={{ minHeight: "220px"}} >
+        <Scrollbars
+          autoHide
+          className="contact-scroll-height"
+          style={{ minHeight: "220px" }}
+        >
           {contactlists && contactlists.length ? (
             <Table borderless hover className="mb-0">
               <tbody>
