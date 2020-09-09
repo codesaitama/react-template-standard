@@ -152,5 +152,12 @@
   "sidebar.employeemovement": "Movement",
   "sidebar.transaction": "Transaction",
   "sidebar.setup": "Setup",
-  "header.create_employee": "Create Employee"
+  "header.create_employee": "Create Employee",
+
+  "sidebar.qualificationandskill": "Qualification And Skill",
+  "sidebar.qualification": "Qualification",
+  "sidebar.trainingprogram": "Training Program",
+  "sidebar.professionaltitle": "Professional Title",
+  "sidebar.employeetraining": "Employee Training",
+  "sidebar.employeeeducation": "Employee Education"
 }
