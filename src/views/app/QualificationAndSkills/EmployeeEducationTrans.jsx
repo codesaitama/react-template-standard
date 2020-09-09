@@ -9,8 +9,9 @@ import { remove, findIndex, filter } from "lodash";
 import ContactForm from "components/contact/ContactForm";
 import { Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import Button from "components/button/Button";
+import EmployeeEducationForm from "./forms/EmployeeEducationForm";
 
-const QualificationSetup = props => {
+const EmployeeEducationTrans = props => {
   const [panel, setPanel] = useState("all");
   const [contactlists, setContactlists] = useState(null);
   const [filteredContactlists, setFilteredContactlists] = useState(null);
@@ -213,16 +214,17 @@ const QualificationSetup = props => {
       >
         <ModalHeader toggle={contactToggleModel}>
           {currentModelAction === "add" ? (
-            <span>Add Employee</span>
+            <span>Add Education Details</span>
           ) : (
-            <span>Edit Employee</span>
+            <span>Edit ducation Details</span>
           )}
         </ModalHeader>
         <ModalBody>
-          <ContactForm
+          <EmployeeEducationForm
             data={editedContent}
             handleFormSubmit={data => handleFormSubmit(data)}
           />
+          {/* <ContactForm data={editedContent} handleFormSubmit={data => handleFormSubmit(data)} /> */}
         </ModalBody>
         <ModalFooter>
           <Button className="c-btn ma-5 c-light">Cancel</Button>
@@ -248,4 +250,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps, null)(QualificationSetup);
+export default connect(mapStateToProps, null)(EmployeeEducationTrans);

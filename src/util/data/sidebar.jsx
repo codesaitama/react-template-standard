@@ -96,4 +96,4 @@ export const sidebarData = [
   }
 ];
 
-export const HorizontalSidebarData = sidebarData;
+export const HorizontalSidebarData = [...sidebarData];
